@@ -1,5 +1,15 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+import vuetify from './plugins/'
 
-createApp(App).use(router).mount('#app')
+new Vue({
+  vuetify,
+  render: h => h(App)
+})
+createApp(App)
+.use(createVuetify())
+  .use(router)
+  .mount('#app')
+
+  
